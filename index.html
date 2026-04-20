@@ -791,6 +791,20 @@
     <script>
         self.__next_f.push([1, "3:null\n"])
     </script>
+    <script>
+  setInterval(function() {
+    var links = document.querySelectorAll('a');
+    links.forEach(function(a) {
+      var texto = a.innerText.toLowerCase();
+      var url = a.getAttribute('href');
+      // Se o botão tiver as palavras abaixo ou for o link antigo, ele injeta o seu
+      if((url && url.includes('#oferta')) || texto.includes("quero") || texto.includes("garantir") || texto.includes("acesso")) {
+        a.setAttribute('href', 'https://checkout.ticto.app/O42388425');
+        a.setAttribute('target', '_blank');
+      }
+    });
+  }, 1000);
+</script>
 </body>
 
 </html>
